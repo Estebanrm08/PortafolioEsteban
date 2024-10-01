@@ -62,12 +62,12 @@ const Footer = () => {
           <h3>Redes Sociales</h3>
           <p>
             <a href="https://www.instagram.com/estebanroman08?igsh=OXVoejZhZXR2Yzdi" target="_blank" rel="noopener noreferrer">
-              <img src="/public/Assets/instagram.png" alt="Instagram" className="social-icon" />
+              <img src="Assets/instagram.png" alt="Instagram" className="social-icon" />
               Instagram
             </a>
             {' | '}
             <a href="https://github.com/Estebanrm08" target="_blank" rel="noopener noreferrer">
-              <img src="/public/Assets/github.png" alt="GitHub" className="social-icon" />
+              <img src="Assets/github.png" alt="GitHub" className="social-icon" />
                GitHub
             </a>
           </p>

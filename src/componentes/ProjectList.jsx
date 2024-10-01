@@ -29,7 +29,7 @@ const ProjectList = () => {
               <div className="card-back">
                 <p>Paso a paso para eliminar archivos binarios del historial de un repositorio Git y evitar posibles errores.</p>
                 <p><code>git filter-repo</code></p>
-                <a href="borrararchivos.html" className="project-link">Ver proyecto</a>
+                <a href="/borrararchivos.html" className="project-link">Ver proyecto</a>
               </div>
             </div>
           </div>
@@ -38,12 +38,12 @@ const ProjectList = () => {
           <div className="card">
             <div className="card-inner">
               <div className="card-front">
-                <img src="public\Assets\image2.png" alt="Proyecto 2" className="card-image" />
+                <img src="Assets\image2.png" alt="Proyecto 2" className="card-image" />
                 <h4>Página Web Responsive y Adaptativa con Cambio de Color</h4>
               </div>
               <div className="card-back">
                 <p>Desarrollo de una página web adaptativa donde se cambia el diseño de los colores al modificar la resolución de la pantalla.</p>
-                <a href="biblioteca2.html" className="project-link">Ver proyecto</a>
+                <a href="/biblioteca2.html" className="project-link">Ver proyecto</a>
                 <br></br>
                 <br></br>
                 <a href="https://github.com/Estebanrm08/Desarolloweb" className="project-link">Repositorio GitHub del proyecto</a>
@@ -55,12 +55,12 @@ const ProjectList = () => {
           <div className="card">
             <div className="card-inner">
               <div className="card-front">
-                <img src="public\Assets\image.png" alt="Proyecto 3" className="card-image" />
+                <img src="Assets/image.png" alt="Proyecto 3" className="card-image" />
                 <h4>Interfaces de Inicio de Sesión para la Universidad Autónoma</h4>
               </div>
               <div className="card-back">
                 <p>Creación de interfaces HTML para el registro de usuario, recuperación de contraseña e inicio de sesión.</p>
-                <a href="public\Interfaces\index.html" className="project-link">Ver proyecto</a>
+                <a href="/Interfaces/index.html" className="project-link">Ver proyecto</a>
                 <br></br>
                 <br></br>
                 <a href="https://github.com/edwinmgallego/clase-practica-css/tree/EstebanR/EstebanRoman" className="project-link">Repositorio GitHub del proyecto</a>
@@ -76,7 +76,7 @@ const ProjectList = () => {
           <div className="card recent-card">
             <div className="card-inner">
               <div className="card-front">
-                <img src="public\Assets\Interfazcontador.png" alt="Proyecto 4" className="card-image" />
+                <img src="Assets/Interfazcontador.png" alt="Proyecto 4" className="card-image" />
                 <h4>Contador de Números y Verificación de Mayor, Menor o Igual</h4>
               </div>
               <div className="card-back">
