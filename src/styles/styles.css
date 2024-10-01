@@ -115,15 +115,6 @@ label {
   margin-bottom: 20px;
 }
 
-.grand-title h4:after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 3px;
-  background-color: #ffa726;
-  margin: 20px auto 0;
-}
-
 .text {
   text-align: center;
   color: #555;
@@ -259,15 +250,6 @@ label {
   margin-bottom: 20px;
 }
 
-.footer h4:after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 2px;
-  background-color: #88cca4;
-  margin: 20px auto;
-}
-
 ul li img {
   width: 100%;
   height: auto;
@@ -290,7 +272,7 @@ ul li img {
 .rect {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 4px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
@@ -334,3 +316,235 @@ button:hover {
     width: 100%;
   }
 }
+
+/* Trabajos Anteriores */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #858585;
+  border: 3px solid #000000;
+  border-radius: 18px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+  text-align: center;
+  position: relative; 
+}
+
+
+@media (min-width: 768px) {
+  .card {
+    width: 280px; 
+  }
+}
+
+.recent-project {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.recent-card {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.card-inner {
+  perspective: 1000px;
+}
+
+.card-front, .card-back {
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+.card-front img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.project-link {
+  color: #ffa726;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  font-size: 1.1em;
+  transition: font-size 0.3s;
+}
+
+.menu a {
+  position: relative; 
+  text-decoration: none; 
+  color: #ffffff; 
+  padding: 10px; 
+}
+
+.menu a::after {
+  content: ''; 
+  display: block; 
+  width: 100%; 
+  height: 3px; 
+  background-color: #ffa726; 
+  position: absolute; 
+  left: 0; 
+  bottom: -5px; 
+  transform: scaleX(0); 
+  transition: transform 0.3s ease; 
+}
+
+.menu a:hover::after {
+  transform: scaleX(1); 
+}
+
+.social-media a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #88cca4; 
+  margin-right: 10px;
+}
+
+.social-icon {
+  width: 20px;  
+  height: 20px;
+  margin-right: 8px; 
+  transition: transform 0.3s ease; 
+}
+
+.social-media a:hover .social-icon {
+  transform: scale(1.2); 
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleX(1.1); 
+    opacity: 0.7;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* Palpitación suave para .grand-title h4:after */
+.grand-title h4:after {
+  content: '';
+  display: block;
+  width: 120px; 
+  height: 4px;  
+  background-color: #ffa726; 
+  margin: 13px auto 0;
+  animation: pulse 2s infinite ease-in-out; 
+}
+
+/* Palpitación suave para .footer h4:after */
+.footer h4:after {
+  content: '';
+  display: block;
+  width: 120px; 
+  height: 4px;  
+  background-color: #88cca4; 
+  margin: 13px auto;
+  animation: pulse 2s infinite ease-in-out; 
+}
+
+/* Definición de la animación de palpitación */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.4); 
+  }
+}
+
+/* Estilo para el menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu {
+    display: none; 
+    background-color: #3c3f46; 
+    position: absolute;
+    top: 70px; 
+    left: 0; 
+    width: 100%; 
+    padding: 5px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1); 
+    margin: 0; 
+  }
+
+  #toggle:checked ~ .menu {
+    display: block; 
+  }
+
+  .menu a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none; 
+  }
+
+  /* Estilo del ícono del menú hamburguesa */
+  label {
+    cursor: pointer;
+    color: #fff; /* Color del ícono */
+  }
+}
+
+/* Estilos adicionales para dispositivos de dimensiones 540x720 y similares */
+@media (max-width: 720px) {
+  .menu {
+    padding: 10px 0; 
+  }
+
+  .menu a {
+    padding: 12px; 
+  }
+
+  
+  #toggle:checked ~ .menu {
+    display: block; 
+  }
+}
+
+.firstproject img {
+  padding: 12px;
+  width: 22%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: 20px;
+  border: 5px solid
+}
+

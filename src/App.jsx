@@ -1,19 +1,19 @@
-// src/App.jsx
 import React from 'react';
-import { Header } from './components/Header';
-import { PhotoSection } from './components/PhotoSection';
-import { ProjectList } from './components/ProjectList';
-import { Footer } from './components/Footer';
+import Footer from "./componentes/Footer.jsx";
+import Header from './componentes/Header.jsx';
+import PhotoSection from './componentes/PhotoSection.jsx';
+import ProjectList from './componentes/ProjectList.jsx';
+import './styles/styles.css'; 
 
-function App() {
+const App = () => {
   return (
-    <>
+    <div>
       <Header />
       <PhotoSection />
       <ProjectList />
       <Footer />
-    </>
+    </div>
   );
-}
+};
 
 export default App;

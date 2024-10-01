@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrar Archivos Binarios</title>
+    <link rel="stylesheet" href="src/styles/styles.css"> 
+    <style>
+        .img1, .img2, .img3, .img4, .img5, .img6 {
+            max-width: 100%; 
+            height: auto;    
+            border: 5px solid; 
+        }
+        .img1 { border-color: red; }   
+        .img2 { border-color: blue; }  
+        .img3 { border-color: orange; } 
+        .img4 { border-color: green; } 
+        .img5 { border-color: purple; } 
+        .img6 { border-color: chocolate; } 
+        .footer {
+            font-weight: bold; 
+            padding: 25px; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav" id="sticker">
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle" />
+                <div class="menu">
+                    <a href="index.html">Volver a la página principal</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="project firstproject">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw7QSyY--JFrwgRQx7GExIJdxonuL0lIsDQw&s" alt="Ejemplo de uso de git filter-repo">
+        <h3 style="text-align: center; font-size: 36px;">Borrar Archivos Binarios</h3>
+        <p style="text-align: center;">Para eliminar archivos binarios del historial de un repositorio Git se usa el comando <br><br><code>git filter-repo</code>.</p>
+    </section>            
+
+    <ul style="list-style-position: inside; text-align: center; padding-left: 0;">
+        <li style="display: inline-block; text-align: left;">
+            <h4 style="font-size: 28px;">Paso 1: Instalar git filter-repo</h4>
+            <img class="img1" src="https://i.ytimg.com/vi/HV8hfmwDlPY/maxresdefault.jpg" alt="Instalación de git filter-repo">
+            <p>Primero, debemos tener git filter-repo instalado. En Windows, si tienes Python instalado, puedes instalar git filter-repo con pip:</p>
+            <p style="text-align: center;"><code>pip install git-filter-repo</code></p>
+        </li>
+    </ul>
+    
+    <ul style="list-style-position: inside; text-align: center; padding-left: 0;">
+        <li style="display: inline-block; text-align: left;">
+            <h4 style="font-size: 28px;">Paso 2: Crear una copia de seguridad del repositorio</h4>
+            <img class="img2" src="https://docs.github.com/assets/cb-44807/images/help/repository/open-with-desktop.png" alt="Clonación de repositorio">
+            <p>Antes de hacer cambios permanentes, es recomendable hacer una copia de seguridad del repositorio. Clona el repositorio en una carpeta local:</p>
+            <p style="text-align: center;"><code>git clone --mirror https://url-del-repositorio.git repo-backup</code></p>
+        </li>
+    
+        <li style="display: inline-block; text-align: left;">
+            <h4 style="font-size: 28px;">Paso 3: Usar git filter-repo para eliminar los archivos binarios</h4>
+            <img class="img3" src="https://www.adslzone.net/app/uploads-adslzone.net/2022/08/borrar-archivos-imborrables-windows.jpg?x=480&y=375&quality=40" alt="Uso de git filter-repo para eliminar archivos binarios">
+            <p>Dirígete al directorio del repositorio:</p>
+            <p style="text-align: center;"><code>cd path/to/your/repo</code></p>
+            <p>Ejecuta el siguiente comando para eliminar los archivos binarios:</p>
+            <p style="text-align: center;"><code>git filter-repo --path "path/al/archivo" --invert-paths</code></p>
+            <p>Reemplaza "path/al/archivo" con la ruta relativa al archivo binario que deseas eliminar. Si requieres eliminar múltiples archivos o carpetas, puedes incluir varias rutas separadas por comas.</p>
+            <p style="text-align: center;"><code>git filter-repo --path '*.exe' --invert-paths</code></p>
+        </li>
+    
+        <li style="display: inline-block; text-align: left;">
+            <h4 style="font-size: 28px;">Paso 4: Verifica el resultado</h4>
+            <img class="img4" src="https://www.renaldibilance.it/wp-content/uploads/2021/04/vp3-300x236.jpg" alt="Verificación del repositorio">
+            <p>Revisa el estado del repositorio para asegurarte de que los archivos han sido eliminados:</p>
+            <p style="text-align: center;"><code>git log --stat</code></p>
+            <p>Este comando mostrará el historial de confirmaciones sin los archivos eliminados.</p>
+        </li>
+    
+        <li style="display: inline-block; text-align: left;">
+            <h4 style="font-size: 28px;">Paso 5: Forzar el push de los cambios al repositorio remoto</h4>
+            <img class="img5" src="https://www.marketing91.com/wp-content/uploads/2015/07/Push-strategy.jpg" alt="Forzar push al repositorio remoto">
+            <p>Finalmente, deberás forzar un push de los cambios al repositorio remoto. Este es un cambio destructivo que afectará a todos los usuarios del repositorio:</p>
+            <p style="text-align: center;"><code>git push origin --force --all</code></p>
+            <p style="text-align: center;"><code>git push origin --force --tags</code></p>
+        </li>
+    
+        <li style="display: inline-block; text-align: left;">
+            <h4 style="font-size: 28px;">Paso 6: Notifica a los colaboradores</h4>
+            <img class="img6" src="https://www.justiciatransparente.com.mx/wp-content/uploads/2021/04/notifiacion.jpg" alt="Notificación a los colaboradores">
+            <p>Si otros usuarios están trabajando en el repositorio, deberás notificarles para que también actualicen sus copias locales:</p>
+            <p style="text-align: center;"><code>git fetch --all</code></p>
+            <p style="text-align: center;"><code>git reset --hard origin/main</code></p>
+        </li>
+    </ul>
+
+    <div class="footer">
+        Esteban Román Mesa - 2024
+    </div>
+
+</body>
+</html>
