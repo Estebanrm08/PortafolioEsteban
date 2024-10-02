@@ -6,7 +6,7 @@ const PhotoSection = () => {
       <div className="photo-text">
         <h4 data-ix="skype">Esteban Román Mesa</h4>
         <p data-ix="subtitle-hero-up">Estudiante de Ingeniería Multimedia en la Universidad Autónoma de Occidente.
-        Actualmente, estoy en 6 semestre de la carrera.
+        Actualmente, estoy en 6 semestre de la carrera, tengo 20 años y me gusta mucho la tecnologia y sus aplicaciones.
         </p>
         <br>
         </br>
