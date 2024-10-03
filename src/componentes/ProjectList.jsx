@@ -70,21 +70,41 @@ const ProjectList = () => {
           </div>
           </section>
 
-        {/* Trabajos recientes */}
-        <section className="recent-project">
+          <section className="recent-project">
           <h3>Trabajos Recientes</h3>
-          <div className="card recent-card">
-            <div className="card-inner">
-              <div className="card-front">
-                <img src="Assets/Interfazcontador.png" alt="Proyecto 4" className="card-image" />
-                <h4>Contador de Números y Verificación de Mayor, Menor o Igual</h4>
+          <div className="card-container">
+
+            {/* Proyecto del Contador */}
+            <div className="card recent-card">
+              <div className="card-inner">
+                <div className="card-front">
+                  <img src="Assets/Interfazcontador.png" alt="Proyecto 4" className="card-image" />
+                  <h4>Contador de Números y Verificación de Mayor, Menor o Igual</h4>
+                </div>
+                <div className="card-back">
+                  <p>Creación de interfaz de un contador de números para aumentar o disminuir, con verificación mayor, igual o menor al número puesto con el del contador.</p>
+                  <a href="https://contador-blue-zeta.vercel.app/" className="project-link">Ver proyecto</a>
+                  <br />
+                  <br />
+                  <a href="https://github.com/Estebanrm08/Contador" className="project-link">Repositorio GitHub del proyecto</a>
+                </div>
               </div>
-              <div className="card-back">
-                <p>Creación de interfaz de un contador de números para aumentar o disminuir, con verificación mayor, igual o menor al número puesto con el del contador. </p>
-                <a href="https://contador-blue-zeta.vercel.app/" className="project-link">Ver proyecto</a>
-                <br />
-                <br />
-                <a href="https://github.com/Estebanrm08/Contador" className="project-link">Repositorio GitHub del proyecto</a>
+            </div>
+
+            {/* Nueva Carta - Proyecto de CardsReact */}
+            <div className="card recent-card">
+              <div className="card-inner">
+                <div className="card-front">
+                  <img src="Assets/Cards.png" alt="Cards React Project" className="card-image" />
+                  <h4>Visualización de Cartas en React</h4>
+                </div>
+                <div className="card-back">
+                  <p>Implementación de una interfaz en React para visualizar cartas horizontales y estilizadas con bordes y efectos personalizados, mostrando habilidades y proyectos.</p>
+                  <a href="https://cards-react-lac.vercel.app/" className="project-link">Ver proyecto</a>
+                  <br />
+                  <br />
+                  <a href="https://github.com/Estebanrm08/CardsReact" className="project-link">Repositorio GitHub del proyecto</a>
+                </div>
               </div>
             </div>
           </div>
